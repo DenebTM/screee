@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+    <head>
+        <title>screee.ee</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="color-scheme" content="dark light" />
+<style>
+html {
+    height: 100vh;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    background: #333;
+    color: #eee;
+}
+body * {
+    display: block;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+}
+a {
+    color: #ccc;
+    font-style: italic;
+    text-decoration: none;
+}
+a:hover {
+    color: #fff;
+    font-style: none;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+header, footer {
+    padding: 1em;
+}
+
+header {
+    flex-grow: 0;
+}
+
+header span {
+    margin-top: -1.25em;
+}
+
+header, main {
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    overflow: auto;
+    padding: 0 1em;
+}
+
+#scree {
+    margin: 0 auto;
+    height: 100%;
+    max-width: 100%;
+}
+</style>
+    </head>
+    <body>
+        <header>
+            <h1>screee.ee</h1>
+            <span>reload for more!</span>
+        </header>
+
+        <main>
+            <img id="scree" src="/eee" alt="Picture of a fennec fox" />
+        </main>
+
+        <footer>
+            <span>run by deneb!</span>
+            <a id="website" href="https://netdeneb.com">personal website</a>
+            <a id="mastodon" href="https://wetdry.world/@deneb" rel="me">@deneb@wetdry.world (mastodon)</a>
+        </footer>
+    </body>
+</html>
