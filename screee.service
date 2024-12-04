@@ -1,0 +1,22 @@
+[Unit]
+Description=fenks
+StartLimitBurst=5
+
+[Service]
+WorkingDirectory=/srv/screee
+ExecStart=/usr/bin/podman run --name screee \
+	-d --rm --replace \
+	--sdnotify=conmon \
+	--cgroups=no-conmon \
+	--label "io.containers.autoupdate=registry" \
+	-p 3100:80 \
+	-v /srv/screee/Caddyfile:/etc/caddy/Caddyfile \
+	-v /srv/screee/content:/usr/share/caddy \
+	docker.io/caddy:latest
+ExecStop=/usr/bin/podman stop screee
+RestartSec=5s
+Type=notify
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target
