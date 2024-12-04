@@ -98,7 +98,11 @@ footer {
         </header>
 
         <main>
-            <img id="scree" src="/eee" alt="Picture of a fennec fox" />
+            {{ $imgs_path := "/eee/" }}
+            {{ $imgs := listFiles $imgs_path }}
+            {{ $imgs_count := len $imgs }}
+            {{ $img := index $imgs (randInt 0 $imgs_count) }}
+            <img id="scree" src="{{$imgs_path}}{{ $img }}" alt="Picture of a fennec fox" />
         </main>
 
         <footer>
