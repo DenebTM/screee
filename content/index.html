@@ -79,7 +79,7 @@ main {
     justify-content: center;
 }
 
-#scree {
+#screee {
     margin: 0 auto;
     height: 100%;
     width: 100%;
@@ -102,7 +102,7 @@ footer {
             {{ $imgs := listFiles $imgs_path }}
             {{ $imgs_count := len $imgs }}
             {{ $img := index $imgs (randInt 0 $imgs_count) }}
-            <img id="scree" src="{{$imgs_path}}{{ $img }}" alt="Picture of a fennec fox" />
+            <img id="screee" src="{{$imgs_path}}{{ $img }}" alt="Picture of a fennec fox" />
         </main>
 
         <footer>
