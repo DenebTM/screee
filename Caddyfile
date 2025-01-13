@@ -1,6 +1,7 @@
 :80 {
   log {
-    output stderr
+    output stdout
+    format console
   }
 
   root /usr/share/caddy
