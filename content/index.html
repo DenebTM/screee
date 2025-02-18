@@ -1,5 +1,4 @@
-{{ $sitename := "screee.ee" }}
-
+{{ $sitename := "screee.ee" -}}
 <!doctype html>
 <html>
     <head>
@@ -148,10 +147,10 @@ a .bold-wrapper span::after {
         </header>
 
         <main>
-            {{ $imgs_path := "/eee/" }}
-            {{ $imgs := listFiles $imgs_path }}
-            {{ $imgs_count := len $imgs }}
-            {{ $img := index $imgs (randInt 0 $imgs_count) }}
+            {{- $imgs_path := "/eee/" }}
+            {{- $imgs := listFiles $imgs_path }}
+            {{- $imgs_count := len $imgs }}
+            {{- $img := index $imgs (randInt 0 $imgs_count) }}
             <img id="screee" src="{{$imgs_path}}{{ $img }}" alt="Picture of a fennec fox" />
         </main>
 
